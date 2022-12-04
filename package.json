@@ -1,0 +1,20 @@
+{
+  "name": "qa.base-performance-test.k6",
+  "version": "1.0.0",
+  "description": "Proof of concept (POC) performance testing K6, Grafana and InfluxDB.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qajonatasmartins/qa.base-performance-test.K6.git"
+  },
+  "author": "Jonatas <Jonatas>",
+  "license": "MIT",
+  "scripts": {
+    "docker_install": "docker-compose up -d influxdb grafana",
+    "smoke": "k6 run -e AMBIENTE='producao' ./scripts/k6/scripts.js"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@types/k6": "^0.41.0"
+  }
+}
